@@ -1,0 +1,25 @@
+{
+  "title": "Adaptive Augmentation via Constrained RL for Cross-Site Chest X-Ray Pneumonia Classification",
+  "description": "A constraint-aware reinforcement learning framework in which a PPO agent learns to select radiologically bounded augmentations adaptively for pneumonia classification. Trained on 191,027 CheXpert and MIMIC-CXR images, achieving 97.23% accuracy, AUC 0.981, and ECE 0.016.",
+  "creators": [
+    {
+      "name": "Mahmoud, Muhammad",
+      "affiliation": "Anonymous"
+    }
+  ],
+  "keywords": [
+    "chest x-ray classification",
+    "reinforcement learning",
+    "data augmentation",
+    "domain shift",
+    "calibration",
+    "curriculum learning",
+    "PPO",
+    "pneumonia detection"
+  ],
+  "license": {
+    "id": "MIT"
+  },
+  "upload_type": "software",
+  "access_right": "open"
+}

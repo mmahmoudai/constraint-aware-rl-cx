@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Adaptive Augmentation via Constrained RL for Cross-Site Chest X-Ray Pneumonia Classification"
+type: software
+authors:
+  - family-names: "Mahmoud"
+    given-names: "Muhammad"
+    affiliation: "Anonymous"
+repository-code: "https://github.com/mmahmoudai/constraint-aware-rl-cx"
+license: MIT
+keywords:
+  - chest x-ray classification
+  - reinforcement learning
+  - data augmentation
+  - domain shift
+  - calibration
+  - curriculum learning
+  - PPO
+  - pneumonia detection
+abstract: >-
+  A constraint-aware reinforcement learning framework for adaptive
+  augmentation in cross-site chest X-ray pneumonia classification.
+  A PPO agent selects from radiologically bounded transformations
+  guided by a multi-objective reward balancing accuracy, calibration,
+  diversity, and cost.
