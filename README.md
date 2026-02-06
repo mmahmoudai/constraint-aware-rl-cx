@@ -1,5 +1,7 @@
 # Adaptive Augmentation via Constrained RL for Cross-Site Chest X-Ray Pneumonia Classification
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18509790.svg)](https://doi.org/10.5281/zenodo.18509790)
+
 This repository contains the code, configuration files, and evaluation scripts for the constraint-aware reinforcement learning framework described in the accompanying paper.
 
 ## Overview
