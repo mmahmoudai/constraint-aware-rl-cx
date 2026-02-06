@@ -1,0 +1,27 @@
+# Baseline: RandAugment (N=2, M=9, grid-searched on validation)
+experiment_name: "randaugment"
+seed: 42
+data_root: "/data"
+output_dir: "outputs"
+num_workers: 8
+epochs: 150
+warmup_epochs: 5
+use_rl: false
+
+classifier:
+  d_model: 64
+  nhead: 4
+  dim_ff: 256
+  n_layers: 2
+  dropout: 0.3
+  lr: 2.0e-4
+  weight_decay: 0.01
+  batch_size: 64
+  use_mixstyle: false
+
+augmentation:
+  type: "randaugment"
+  rand_n: 2
+  rand_m: 9
+  constrained: true
+  use_curriculum: false

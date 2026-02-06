@@ -1,0 +1,31 @@
+# Baseline: MixStyle + RandAugment
+# MixStyle applied after conv blocks 1 and 2 (p=0.5)
+# Combined with RandAugment (N=2, M=9) for fair comparison
+experiment_name: "mixstyle_randaug"
+seed: 42
+data_root: "/data"
+output_dir: "outputs"
+num_workers: 8
+epochs: 150
+warmup_epochs: 5
+use_rl: false
+
+classifier:
+  d_model: 64
+  nhead: 4
+  dim_ff: 256
+  n_layers: 2
+  dropout: 0.3
+  lr: 2.0e-4
+  weight_decay: 0.01
+  batch_size: 64
+  use_mixstyle: true
+  mixstyle_p: 0.5
+  mixstyle_alpha: 0.1
+
+augmentation:
+  type: "randaugment"
+  rand_n: 2
+  rand_m: 9
+  constrained: true
+  use_curriculum: false

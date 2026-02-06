@@ -1,0 +1,60 @@
+# Full constraint-aware RL framework configuration
+# Reproduces the main results from the paper
+
+experiment_name: "constrained_rl"
+seed: 42
+data_root: "/data"
+output_dir: "outputs"
+num_workers: 8
+epochs: 150
+warmup_epochs: 5
+mc_dropout_passes: 20
+
+# RL settings
+use_rl: true
+
+# CNN-Transformer Classifier
+classifier:
+  d_model: 64
+  nhead: 4
+  dim_ff: 256
+  n_layers: 2
+  dropout: 0.3
+  lr: 2.0e-4
+  weight_decay: 0.01
+  batch_size: 64
+  use_mixstyle: false
+
+# PPO Agent
+ppo:
+  state_dim: 100
+  n_actions: 60
+  hidden_dim: 256
+  clip_eps: 0.2
+  entropy_coeff: 0.02
+  gamma: 0.99
+  gae_lambda: 0.95
+  actor_lr: 1.0e-4
+  critic_lr: 5.0e-4
+  buffer_size: 1024
+  batch_size: 128
+
+# Augmentation
+augmentation:
+  type: "rl"
+  constrained: true
+  use_curriculum: true
+
+# Curriculum
+curriculum:
+  n_stages: 5
+  rollback_thresh: 0.02
+  tau_adapt: 100.0
+
+# Reward weights
+reward:
+  alpha: 1.0      # accuracy
+  beta: 0.3       # diversity
+  delta: 0.5      # calibration
+  gamma_cost: 0.1  # computational cost
+  epsilon: 2.0     # implausibility penalty
